@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Interview Preparation Tool
+
+An interactive web application that helps users prepare for technical interviews using AI-powered conversations. The application supports various interview types, difficulty levels, and prompt engineering techniques.
+
+## Features
+
+- 🤖 **Interactive Chat Interface**: Real-time conversation with AI interviewer
+- 🎯 **Multiple Interview Types**:
+  - Behavioral interview
+  - Technical Interview
+  - System Design
+  - Leadership & Management
+- 🧠 **Advanced Prompt Engineering Techniques**:
+  - Zero-Shot Prompting
+  - Few-Shot Learning
+  - Chain of Thought
+  - Role-Playing
+  - Step-by-Step Analysis
+- ⚙️ **Customizable Settings**:
+  - Difficulty levels (Easy, Medium, Hard)
+  - Job description integration
+  - Custom role-play personas
+- 💾 **Conversation Management**:
+  - Download conversation history
+  - Retry failed messages
+  - Real-time message status
+- 🎨 **Modern UI/UX**:
+  - Responsive design
+  - Loading animations
+  - Error handling
+  - Beautiful gradients and animations
+
+- **Customization Options**
+  - Adjustable difficulty levels (Easy, Medium, Hard)
+  - Optional job description input for tailored responses
+  - Role-play persona customization
+
+- **Interactive Chat Interface**
+  - Real-time AI responses
+  - Message retry functionality
+  - Conversation download feature
+  - Auto-scrolling chat window
+  - Loading states and error handling
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── api/            # API routes
+│   ├── globals.css     # Global styles
+│   ├── layout.tsx      # Root layout
+│   └── page.tsx        # Main page
+├── components/
+│   ├── InterviewPrep.tsx   # Main component
+│   ├── InterviewForm.tsx   # Interview settings form
+│   ├── ChatMessage.tsx     # Individual chat message
+│   └── ChatInput.tsx       # Chat input form
+├── constants/
+│   └── interview.ts    # Interview-related constants
+├── hooks/
+│   └── useInterviewChat.ts # Chat functionality hook
+└── types/
+    └── interview.ts    # TypeScript type definitions
+```
+
+## Technologies Used
+
+- Next.js 13+ (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+- Custom Hooks
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+   ```bash
+   git clone [repository-url]
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Usage
 
-## Learn More
+1. Select your interview type and difficulty level
+2. Choose a prompt engineering technique
+3. (Optional) Enter a job description for tailored responses
+4. (Optional) Set a role-play persona if using role-play technique
+5. Start the conversation by asking questions or responding to AI prompts
+6. Download the conversation for future reference
 
-To learn more about Next.js, take a look at the following resources:
+## Development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The application is built with a modular architecture:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Components**: Reusable UI components with clear responsibilities
+- **Hooks**: Custom hooks for managing chat functionality
+- **Types**: TypeScript interfaces for type safety
+- **Constants**: Centralized configuration for interview types and options
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+
+
