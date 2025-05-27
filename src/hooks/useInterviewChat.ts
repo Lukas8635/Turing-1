@@ -123,9 +123,10 @@ export const useInterviewChat = () => {
         msg.id === messageId 
           ? { ...msg, content: errorMessage, status: 'error' }
           : msg
-      ));
+      )); 
     }
   };
+  console.log('test')
 
   const downloadConversation = () => {
     const text = conversation
