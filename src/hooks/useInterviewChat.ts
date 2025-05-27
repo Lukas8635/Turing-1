@@ -59,11 +59,12 @@ export const useInterviewChat = () => {
       ));
 
     } catch (error) {
-      // setConversation(prev => prev.map(msg => 
-      //   msg.id === assistantMessage.id 
-      //     // ? { ...msg, content: 'An error occurred while processing your request.', status: 'error' }
-      //     // : msg
-      // ));
+      const errorMessage = error instanceof Error ? error.message : 'An error occurred while processing your request.';
+      setConversation(prev => prev.map(msg => 
+        msg.id === assistantMessage.id 
+          ? { ...msg, content: errorMessage, status: 'error' }
+          : msg
+      ));
     } finally {
       setIsLoading(false);
     }
@@ -117,11 +118,12 @@ export const useInterviewChat = () => {
           : msg
       ));
     } catch (error) {
-      // setConversation(prev => prev.map(msg => 
-      //   msg.id === messageId 
-      //     ? { ...msg, content: 'An error occurred while processing your request.', status: 'error' }
-      //     : msg
-      // ));
+      const errorMessage = error instanceof Error ? error.message : 'An error occurred while processing your request.';
+      setConversation(prev => prev.map(msg => 
+        msg.id === messageId 
+          ? { ...msg, content: errorMessage, status: 'error' }
+          : msg
+      ));
     }
   };
 
